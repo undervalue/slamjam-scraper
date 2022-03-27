@@ -1,0 +1,27 @@
+monitor:
+  timeout: 10           # timeout for requests
+  retry: 3              # maximum retry attempts
+  retryStop: [500, 407] # response codes to stop retrying after
+  maxConcurrent: 50    # maximum concurrent requests
+  delta: 500             # minimum ammount of days to consider a product as new
+  verbose: True         # show verbose output
+  start: 100000         # start of the range to monitor
+  end: 999900           # end of the range to monitor
+  interval: 86400       # interval in secods to re-monitor
+discord:
+  token: 'abcdefghijklmnopqrstuvwxyz'                                              # discord bot token
+  notify:                                                # channel to send new product notifications
+  allow:
+    everyone: False                                      # allow everyone to use commands
+    role: [
+      6488277517132414351,                               # role ID of those allowed to use the scraper
+      626029876597653249,
+      987034394971242516
+      
+    ]
+    channel: 5102308777543014794                         
+    
+  embedColor:                                                           # embed color configuration
+    normal: 0x2f3136
+    success: 0x3ba55d
+    error: 0xed4245
